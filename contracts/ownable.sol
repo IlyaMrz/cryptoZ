@@ -25,14 +25,14 @@ contract Ownable {
     /**
      * @return the address of the owner.
      */
-    function owner() payable public returns (address payable) {
+    function owner() public view returns (address payable) {
         return _owner;
     }
 
     /**
      * @dev Throws if called by any account other than the owner.
      */
-    modifier onlyOwner() {
+    modifier  onlyOwner() {
         require(isOwner());
         _;
     }
@@ -50,7 +50,7 @@ contract Ownable {
      * It will not be possible to call the functions with the `onlyOwner`
      * modifier anymore.
      */
-    function renounceOwnership() public payable onlyOwner {
+    function renounceOwnership() public onlyOwner {
         emit OwnershipTransferred(_owner, address(0));
         _owner = address(0);
     }
