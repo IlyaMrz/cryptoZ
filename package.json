@@ -1,0 +1,28 @@
+{
+  "name": "cryptozombies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlyaMrz/cryptoZ.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IlyaMrz/cryptoZ/issues"
+  },
+  "homepage": "https://github.com/IlyaMrz/cryptoZ#readme",
+  "devDependencies": {
+    "hardhat": "^2.6.8"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "truffle": "^5.4.21",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
