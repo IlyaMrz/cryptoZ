@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>CryptoZombies front-end</title>
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript" src="web3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <!-- <script language="javascript" type="text/javascript" src="web3.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
   </head>
   <body>
       1
@@ -23,7 +24,6 @@
         function startApp() {
             var cryptoZombiesAddress = "0xFE26edeB0d1F62bb6dB2Bc5bB79D7AF33e654E35";
             cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
-
             var accountInterval = setInterval(function() {
             // Check if account has changed
             if (web3.eth.accounts[0] !== userAccount) {
@@ -122,9 +122,12 @@
             
             // Checking if Web3 has been injected by the browser (Mist/MetaMask)
             if (typeof web3 !== 'undefined') {
+                console.log('web3 found')
             // Use Mist/MetaMask's provider
             web3js = new Web3(web3.currentProvider);
             } else {
+                console.log('web3 NOT found')
+
             // Handle the case where the user doesn't have Metamask installed
             // Probably show them a message prompting them to install Metamask
             }
