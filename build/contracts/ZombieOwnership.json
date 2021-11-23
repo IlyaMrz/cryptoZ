@@ -4306,7 +4306,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-23T17:36:33.026Z",
+  "updatedAt": "2021-11-23T18:50:27.029Z",
   "devdoc": {
     "author": "ilyamrz",
     "details": "Compliant with OpenZeppelin's implementation of the ERC721 spec draft",
